@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: #ffe6f0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.game-box {
+  margin-top: 20px;
+}
+
+.boxes {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border: 3px solid pink;
+  border-radius: 12px;
+  box-shadow: 0 0 10px pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+#message {
+ 
+  font-size: 1.5rem;
+  color: #ff4081;
+}
+
+
+@media (max-width: 600px) {
+  #game {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    max-width: 300px;
+  }
+
+  .box {
+    font-size: 18px;
+  }
+
+  #finalMessage {
+    font-size: 1.5rem;
+  }
+}
