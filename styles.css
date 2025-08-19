@@ -7,6 +7,8 @@ body {
   background: #ffe6f0;
   font-family: Arial, sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .game-box {
@@ -17,6 +19,7 @@ body {
   display: flex;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap; /* makes it wrap on smaller screens */
 }
 
 .box {
@@ -39,23 +42,24 @@ body {
 }
 
 #message {
- 
   font-size: 1.5rem;
   color: #ff4081;
+  margin-bottom: 15px;
 }
 
-
+/* 📱 Mobile styles */
 @media (max-width: 600px) {
-  #game {
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    max-width: 300px;
+  .boxes {
+    gap: 10px; /* smaller gap */
   }
 
   .box {
-    font-size: 18px;
+    width: 70px;
+    height: 70px;
+    font-size: 22px;
   }
 
-  #finalMessage {
-    font-size: 1.5rem;
+  #message {
+    font-size: 1.2rem;
   }
 }
